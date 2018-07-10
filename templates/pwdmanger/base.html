@@ -1,0 +1,208 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% block title %}
+    {% endblock title %}
+    <!-- Bootstrap core CSS-->
+    <link href="{% static 'pwdmanger/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'pwdmanger/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="{% static 'pwdmanger/vendor/datatables/dataTables.bootstrap4.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="{% static 'pwdmanger/css/sb-admin.css' %}" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="#">圆通科技</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="密码管理">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
+                   data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-wrench"></i>
+                    <span class="nav-link-text">密码管理</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseComponents">
+                    <li>
+                        <a href="{% url 'pwdmanger:passwd_list' %}">密码列表</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'pwdmanger:passwd_add' %}">新增密码</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </li>
+        {#        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">#}
+        {#            <a class="nav-link" href="#">#}
+        {#                <i class="fa fa-fw fa-link"></i>#}
+        {#                <span class="nav-link-text">Zabbix</span>#}
+        {#            </a>#}
+        {#        </li>#}
+
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+{#            <li class="dropdown">#}
+{#                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">#}
+{#                            您好, {{ user.username }}#}
+{#                            <b class="caret"></b>#}
+{#                        </a>#}
+{#                        <ul class="dropdown-menu">#}
+{#                            <li><a href="#"><i class="fa fa-fw fa-pencil"></i>修改密码</a></li>#}
+{#                            <li><a href="{% url 'users:user_logout' %}">注销</a></li>#}
+{#                        </ul>#}
+{#                    </li>#}
+
+{#            <li class="nav-item">#}
+{#                <form class="form-inline my-2 my-lg-0 mr-lg-2">#}
+{#                    <div class="input-group">#}
+{#                        <input class="form-control" type="text" placeholder="Search for...">#}
+{#                        <span class="input-group-append">#}
+{#                <button class="btn btn-primary" type="button">#}
+{#                  <i class="fa fa-search"></i>#}
+{#                </button>#}
+{#              </span>#}
+{#                    </div>#}
+{#                </form>#}
+{#            </li>#}
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    {% if user.is_authenticated %}
+{#                    <i class="fa fa-fw fa-wrench"></i>#}
+                        您好！{{ user.username }}</a>
+                {% endif %}
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'users:user_change_pass' %}">
+                    <i class="fa fa-fw fa-wrench"></i>修改密码</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa fa-fw fa-sign-out"></i>注销</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Breadcrumbs-->
+{#              <ol class="breadcrumb">#}
+{#                <li class="breadcrumb-item">#}
+{#                  <a href="#">密码管理</a>#}
+{#                </li>#}
+{#                <li class="breadcrumb-item active">密码信息</li>#}
+{#              </ol>#}
+    {% block bread %}
+    {% endblock bread %}
+        <!-- Example DataTables Card-->
+{#                        <div class="card mb-3">#}
+{#                            <div class="card-header">#}
+{#                                <i class="fa fa-table"></i> 密码信息表#}
+{#                            </div>#}
+
+        <div class="card-body">
+            <div class="table-responsive">
+                {% block table %}
+                {% endblock table %}
+            </div>
+            {% block form %}
+            {% endblock %}
+        </div>
+{#                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>#}
+{#                      </div>#}
+{#                        </div>#}
+        <!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyleft © 主机组</small>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">确定注销</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">选择注销按钮会退出当前登陆状态！</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+                        <a class="btn btn-primary" href="{% url 'users:user_logout' %}">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript-->
+        <script src="{% static 'pwdmanger/vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'pwdmanger/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="{% static 'pwdmanger/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+        <!-- Page level plugin JavaScript-->
+        <script src="{% static 'pwdmanger/vendor/datatables/jquery.dataTables.js' %}"></script>
+        <script src="{% static 'pwdmanger/vendor/datatables/dataTables.bootstrap4.js' %}"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="{% static 'pwdmanger/js/sb-admin.min.js' %}"></script>
+        <!-- Custom scripts for this page-->
+        <script src="{% static 'pwdmanger/js/sb-admin-datatables.min.js' %}"></script>
+
+
+        <!-- 信息删除确认 -->
+        <div class="modal fade" id="delcfmModel">
+            <div class="modal-dialog">
+                <div class="modal-content message_align">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">×</span></button>
+                        <h4 class="modal-title">提示信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>您确认要删除吗？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="url"/>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <a onclick="urlSubmit()" class="btn btn-success" data-dismiss="modal">确定</a>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+    </div>
+</div>
+</body>
+</html>

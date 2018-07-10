@@ -9,12 +9,17 @@ from .forms import Passwd_infoForm
 #for limits
 from django.contrib.auth.decorators import login_required
 
+def index(request):
+    return render(request,'pwdmanger/index.html')
+
+def test(request):
+    return render(request,'pwdmanger/list.html')
 
 @login_required()
 def passwd_list(request):
     pwd_list=Passwd_info.objects.all().order_by('changed_time')
     content={'pwd_list':pwd_list}
-    return render(request,'pwdmanger/tables.html',content)
+    return render(request,'pwdmanger/list.html',content)
 
 @login_required()
 def passwd_edit(request,item_id):

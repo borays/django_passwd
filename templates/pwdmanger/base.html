@@ -63,23 +63,26 @@
 
         <ul class="nav navbar-top-links navbar-right">
             {% if user.is_authenticated %}
-            <!-- /.dropdown -->
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> {{ user.username }} <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a href="{% url 'users:user_change_pass' %}"><i class="fa fa-wrench fa-fw"></i> 修改密码</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="{% url 'users:user_logout' %}"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
-                    </li>
-                    {% endif %}
-                </ul>
-                <!-- /.dropdown-user -->
-            </li>
-            <!-- /.dropdown -->
+                <!-- /.dropdown -->
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> {{ user.username }} <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="{% url 'users:user_change_pass' %}"><i class="fa fa-wrench fa-fw"></i> 修改密码</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="{% url 'users:user_logout' %}"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+{#            {% else %}#}
+{#                <li><a href="{% url 'users:register' %}">注册</a></li>#}
+{#                <li><a href="{% url 'users:login' %}">登陆</a></li>#}
+                <!-- /.dropdown -->
+            {% endif %}
         </ul>
         <!-- /.navbar-top-links -->
 

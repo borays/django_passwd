@@ -10,30 +10,74 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
+        {#        {% if form.errors %}#}
+        {#                            <div class="alert alert-danger alert-dismissable">#}
+        {#                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>#}
+        {##}
+        {#                                {{ form.errors.ip_address }}#}
+        {#                            </div>#}
+        {#                        {% endif %}#}
         <div class="row">
             <div class="col-lg-4">
                 <div class="panel panel-default">
 
                     <div class="panel-body">
-                        {% if form.errors %}
-                            <p>{{ form.errors }}</p>
-                        {% endif %}
+
                         <form class="form" action="{% url 'pwdmanger:passwd_add' %}" method="post">
                             {% csrf_token %}
+                            <div class="form-group">
+                                <label>集群名</label>
+                                <input class="form-control" placeholder="集群名" value="{{ entry.cluster_name }}"
+                                       name="cluster_name">
+                                <p><span>{{ form.errors.cluster_name }}</span></p>
+                            </div>
                             <div class="form-group">
                                 <label>IP地址</label>
                                 <input class="form-control" placeholder="IP地址" value="{{ entry.ip_address }}"
                                        name="ip_address">
+                                <p><span>{{ form.errors.ip_address }}</span></p>
+                            </div>
+                            <div class="form-group">
+                                <label>主机名</label>
+                                <input class="form-control" placeholder="主机名" value="{{ entry.host_name }}"
+                                       name="host_name">
+                                <p><span>{{ form.errors.host_name }}</span></p>
+                            </div>
+                            <div class="form-group">
+                                <label>用户名</label>
+                                <input class="form-control" placeholder="用户名" value="{{ entry.user_name }}"
+                                       name="user_name">
+                                <p><span>{{ form.errors.user_name }}</span></p>
                             </div>
                             <div class="form-group">
                                 <label>密码</label>
                                 <input class="form-control" placeholder="密码" value="{{ entry.password }}"
                                        name="password">
+                                <p><span>{{ form.errors.password }}</span></p>
                             </div>
                             <div class="form-group">
                                 <label>系统类型</label>
                                 <input class="form-control" placeholder="系统类型" value="{{ entry.os_type }}"
                                        name="os_type">
+                                <p><span>{{ form.errors.os_type }}</span></p>
+                            </div>
+                            <div class="form-group">
+                                <label>应用</label>
+                                <input class="form-control" placeholder="应用" value="{{ entry.apps }}"
+                                       name="apps">
+                                <p><span>{{ form.errors.apps }}</span></p>
+                            </div>
+                            <div class="form-group">
+                                <label>运维人</label>
+                                <input class="form-control" placeholder="运维人" value="{{ entry.op }}"
+                                       name="op">
+                                <p><span>{{ form.errors.op }}</span></p>
+                            </div>
+                            <div class="form-group">
+                                <label>负责人</label>
+                                <input class="form-control" placeholder="负责人" value="{{ entry.order }}"
+                                       name="order">
+                                <p><span>{{ form.errors.order }}</span></p>
                             </div>
                             <button type="submit" class="btn btn-primary">新增</button>
                         </form>

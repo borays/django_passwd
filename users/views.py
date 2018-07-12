@@ -9,7 +9,7 @@ from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse('pwdmanger:passwd_list'))
+    return HttpResponseRedirect(reverse('users:user_login'))
 
 
 def user_register(request):

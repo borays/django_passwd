@@ -20,14 +20,14 @@
                                 <i class="fa fa-comments fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">26</div>
-                                <div>New Comments!</div>
+                                <div class="huge">{{ order.count }}</div>
+                                <div>负责人统计</div>
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="{% url 'pwdmanger:passwd_list' %}">
                         <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
+                            <span class="pull-left">查看详情</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -42,14 +42,14 @@
                                 <i class="fa fa-tasks fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">12</div>
-                                <div>New Tasks!</div>
+                                <div class="huge">{{ apps.count }}</div>
+                                <div>应用统计</div>
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="{% url 'pwdmanger:passwd_list' %}">
                         <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
+                            <span class="pull-left">查看详情</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -64,14 +64,14 @@
                                 <i class="fa fa-shopping-cart fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">124</div>
-                                <div>New Orders!</div>
+                                <div class="huge">{{ cluster.count }}</div>
+                                <div>集群统计</div>
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="{% url 'pwdmanger:passwd_list' %}">
                         <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
+                            <span class="pull-left">查看详情</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -86,14 +86,14 @@
                                 <i class="fa fa-support fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">13</div>
-                                <div>Support Tickets!</div>
+                                <div class="huge">{{ ops.count }}</div>
+                                <div>运维人员统计</div>
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="{% url 'pwdmanger:passwd_list' %}">
                         <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
+                            <span class="pull-left">查看详情</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -103,10 +103,10 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 应用分布
                         <div class="pull-right">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default btn-xs dropdown-toggle"
@@ -129,9 +129,120 @@
                         </div>
                     </div>
                     <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div id="morris-area-chart"></div>
+                    {#                    <div class="panel-body">#}
+                    {#                        <div id="morris-area-chart"></div>#}
+                    {#                    </div>#}
+
+                    <div id="bar-apps_info" style="height: 250px;"></div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                <!-- /.panel -->
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 负责人统计
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                        data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#">Action</a>
+                                    </li>
+                                    <li><a href="#">Another action</a>
+                                    </li>
+                                    <li><a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    <!-- /.panel-heading -->
+                    {#                    <div class="panel-body">#}
+                    {#                        <div id="morris-area-chart"></div>#}
+                    {#                    </div>#}
+
+                    <div id="bar-order" style="height: 250px;"></div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                <!-- /.panel -->
+            </div>
+
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 集群分布情况
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                        data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#">Action</a>
+                                    </li>
+                                    <li><a href="#">Another action</a>
+                                    </li>
+                                    <li><a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-heading -->
+                    {#                    <div class="panel-body">#}
+                    {#                        <div id="morris-area-chart"></div>#}
+                    {#                    </div>#}
+
+                    <div id="donut-cluster" style="height: 250px;"></div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                <!-- /.panel -->
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 系统分布情况
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                        data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#">Action</a>
+                                    </li>
+                                    <li><a href="#">Another action</a>
+                                    </li>
+                                    <li><a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-heading -->
+                    {#                    <div class="panel-body">#}
+                    {#                        <div id="morris-area-chart"></div>#}
+                    {#                    </div>#}
+
+                    <div id="donut-os" style="height: 250px;"></div>
                     <!-- /.panel-body -->
                 </div>
                 <!-- /.panel -->
@@ -143,3 +254,53 @@
         <!-- /.col-lg-4 -->
     </div>
 {% endblock page_wrapper %}
+{% block javasc %}
+    <script>
+        new Morris.Bar({
+            element: 'bar-apps_info',
+
+            {#data: [#}
+            {##}
+            {#  { y: '2007', a: 75 },#}
+            {#  { y: '2008', a: 50 },#}
+            {#  { y: '2009', a: 75 },#}
+            {#  { y: '2010', a: 50 },#}
+            {#  { y: '2011', a: 75 },#}
+            {#  { y: '2012', a: 100 }#}
+            {#],#}
+            data:{{ app_info|safe }},
+            xkey: '应用',
+            ykeys: ['数量'],
+            labels: ['数量']
+        });
+
+        new Morris.Bar({
+            element: 'bar-order',
+
+            {#data: [#}
+            {##}
+            {#  { y: '2007', a: 75 },#}
+            {#  { y: '2008', a: 50 },#}
+            {#  { y: '2009', a: 75 },#}
+            {#  { y: '2010', a: 50 },#}
+            {#  { y: '2011', a: 75 },#}
+            {#  { y: '2012', a: 100 }#}
+            {#],#}
+            data:{{ order_info|safe }},
+            xkey: '负责人',
+            ykeys: ['数量'],
+            labels: ['数量']
+        });
+
+        new Morris.Donut({
+            element: 'donut-cluster',
+            data: {{ cluster_info|safe }}
+        });
+
+        new Morris.Donut({
+            element: 'donut-os',
+            data: {{ os_info|safe }}
+        });
+    </script>
+
+{% endblock javasc %}

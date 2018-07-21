@@ -18,68 +18,99 @@
         {#                            </div>#}
         {#                        {% endif %}#}
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-8">
                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-plus-circle "></i>新增密码
+                    </div>
 
                     <div class="panel-body">
 
-                        <form class="form" action="{% url 'pwdmanger:passwd_add' %}" method="post">
+                        <form class="form form-horizontal" action="{% url 'pwdmanger:passwd_add' %}" method="post">
                             {% csrf_token %}
                             <div class="form-group">
-                                <label>集群名</label>
-                                <input class="form-control" placeholder="集群名" value="{{ entry.cluster_name }}"
-                                       name="cluster_name">
-                                <p><span>{{ form.errors.cluster_name }}</span></p>
+                                <label class="col-sm-2 control-label">集群名</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="集群名" value="{{ entry.cluster_name }}"
+                                           name="cluster_name">
+                                    <p class="text-danger"><span>{{ form.errors.cluster_name }}</span></p>
+                                </div>
+
                             </div>
                             <div class="form-group">
-                                <label>IP地址</label>
-                                <input class="form-control" placeholder="IP地址" value="{{ entry.ip_address }}"
-                                       name="ip_address">
-                                <p><span>{{ form.errors.ip_address }}</span></p>
+                                <label class="col-sm-2 control-label">IP地址</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="IP地址" value="{{ entry.ip_address }}"
+                                           name="ip_address">
+
+                                    <p><span style="color:#F00">{{ form.errors.ip_address }}</span></p>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>主机名</label>
-                                <input class="form-control" placeholder="主机名" value="{{ entry.host_name }}"
-                                       name="host_name">
-                                <p><span>{{ form.errors.host_name }}</span></p>
+                                <label class="col-sm-2 control-label">主机名</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="主机名" value="{{ entry.host_name }}"
+                                           name="host_name">
+                                    <p><span style="color:#F00">{{ form.errors.host_name }}</span></p>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>用户名</label>
-                                <input class="form-control" placeholder="用户名" value="{{ entry.user_name }}"
-                                       name="user_name">
-                                <p><span>{{ form.errors.user_name }}</span></p>
+                                <label class="col-sm-2 control-label">用户名</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="用户名" value="{{ entry.user_name }}"
+                                           name="user_name">
+                                    <p><span style="color:#F00">{{ form.errors.user_name }}</span></p>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>密码</label>
-                                <input class="form-control" placeholder="密码" value="{{ entry.password }}"
-                                       name="password">
-                                <p><span>{{ form.errors.password }}</span></p>
+                                <label class="col-sm-2 control-label">密码</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="密码" value="{{ entry.password }}"
+                                           name="password">
+
+                                    <p><span style="color:#F00">{{ form.errors.password }}</span></p>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>系统类型</label>
-                                <input class="form-control" placeholder="系统类型" value="{{ entry.os_type }}"
-                                       name="os_type">
-                                <p><span>{{ form.errors.os_type }}</span></p>
+                                <label class="col-sm-2 control-label">系统类型</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="系统类型" value="{{ entry.os_type }}"
+                                           name="os_type">
+
+                                    <p><span style="color:#F00">{{ form.errors.os_type }}</span></p>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>应用</label>
-                                <input class="form-control" placeholder="应用" value="{{ entry.apps }}"
-                                       name="apps">
-                                <p><span>{{ form.errors.apps }}</span></p>
+                                <label class="col-sm-2 control-label">应用</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="应用" value="{{ entry.apps }}"
+                                           name="apps">
+
+                                    <p><span style="color:#F00">{{ form.errors.apps }}</span></p>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>运维人</label>
-                                <input class="form-control" placeholder="运维人" value="{{ entry.op }}"
-                                       name="op">
-                                <p><span>{{ form.errors.op }}</span></p>
+                                <label class="col-sm-2 control-label">运维人</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="运维人" value="{{ entry.op }}"
+                                           name="op">
+
+                                    <p><span style="color:#F00">{{ form.errors.op }}</span></p>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>负责人</label>
-                                <input class="form-control" placeholder="负责人" value="{{ entry.order }}"
-                                       name="order">
-                                <p><span>{{ form.errors.order }}</span></p>
+                                <label class="col-sm-2 control-label">负责人</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="负责人" value="{{ entry.order }}"
+                                           name="order">
+
+                                    <p><span style="color:#F00">{{ form.errors.order }}</span></p>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-default">新增</button>
+                            <div class="col-sm-8">
+                                <button type="reset" class="btn btn-default">重置</button>
+                                <button type="submit" class="btn btn-default">新增</button>
+                            </div>
                         </form>
                     </div>
                 </div>

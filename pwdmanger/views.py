@@ -13,7 +13,6 @@ from django.db.models import Count, Min, Sum
 # for limits
 from django.contrib.auth.decorators import login_required, permission_required
 
-
 @login_required()
 def index(request):
     app_info = get_apps_info()
@@ -23,9 +22,10 @@ def index(request):
     owners = Passwd_info.objects.values('order').distinct()
     apps = Passwd_info.objects.values('apps').distinct()
     ops = Passwd_info.objects.values('op').distinct()
+    os_type=Passwd_info.objects.values('os_type').distinct()
     cluster = Passwd_info.objects.values('cluster_name').distinct()
     content = {'order': owners, 'apps': apps, 'ops': ops, 'cluster': cluster, 'app_info': app_info,
-               'order_info': order_info, 'cluster_info': cluster_info,'os_info':os_info}
+               'order_info': order_info, 'cluster_info': cluster_info,'os_info':os_info,'os_type':os_type}
     return render(request, 'pwdmanger/index.html', content)
 
 
@@ -136,3 +136,15 @@ def get_os_info():
         _tmp_data = {x: list_data[0], y: list_data[1]}
         data.append(_tmp_data)
     return data
+
+@login_required()
+def api_update_pass(request):
+    if request.method != 'POST':
+        return HttpResponse("404")
+    else:
+        ip=request.POST.get('ip')
+        password=request.POST.get('password')
+        if Passwd_info.objects.filter(ip_address=ip).update(password=password):
+            return HttpResponse("OK")
+        else:
+            return HttpResponse("ERROR")

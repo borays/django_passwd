@@ -109,9 +109,9 @@
                             <li>
                                 <a href="{% url 'pwdmanger:passwd_list' %}">密码列表</a>
                             </li>
-                            <li>
-                                <a href="{% url 'pwdmanger:passwd_add' %}">新增密码</a>
-                            </li>
+{#                            <li>#}
+{#                                <a href="{% url 'pwdmanger:passwd_add' %}">新增密码</a>#}
+{#                            </li>#}
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
@@ -156,7 +156,8 @@
 <script>
     $(document).ready(function () {
         $('#dataTables-list').DataTable({
-            responsive: true
+            responsive: true,
+            order: [[2, "DESC"]]
         });
     });
 

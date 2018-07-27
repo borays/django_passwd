@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="188a60a4-ec39-457d-ae1f-e84837a397ae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pwdmanger/urls.py" afterPath="$PROJECT_DIR$/pwdmanger/urls.py" />
-      <change beforePath="$PROJECT_DIR$/pwdmanger/views.py" afterPath="$PROJECT_DIR$/pwdmanger/views.py" />
-      <change beforePath="$PROJECT_DIR$/templates/pwdmanger/add.html" afterPath="$PROJECT_DIR$/templates/pwdmanger/add.html" />
-      <change beforePath="$PROJECT_DIR$/templates/pwdmanger/base.html" afterPath="$PROJECT_DIR$/templates/pwdmanger/base.html" />
-      <change beforePath="$PROJECT_DIR$/templates/pwdmanger/edit.html" afterPath="$PROJECT_DIR$/templates/pwdmanger/edit.html" />
-      <change beforePath="$PROJECT_DIR$/templates/pwdmanger/index.html" afterPath="$PROJECT_DIR$/templates/pwdmanger/index.html" />
-      <change beforePath="$PROJECT_DIR$/templates/pwdmanger/list.html" afterPath="$PROJECT_DIR$/templates/pwdmanger/list.html" />
+    <list default="true" id="188a60a4-ec39-457d-ae1f-e84837a397ae" name="Default" comment="201807201523">
+      <change beforePath="$PROJECT_DIR$/.idea/dj_pwd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dj_pwd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dj_pwd/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dj_pwd/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwdmanger/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pwdmanger/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwdmanger/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pwdmanger/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwdmanger/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pwdmanger/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pwdmanger/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pwdmanger/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pwdmanger/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pwdmanger/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pwdmanger/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pwdmanger/list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,13 +24,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pwdmanger/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+            <state relative-caret-position="342">
+              <caret line="58" column="8" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
               <folding>
                 <element signature="e#15#50#0" expanded="true" />
+                <marker date="1532594787982" expanded="true" signature="1957:2224" ph="..." />
               </folding>
             </state>
           </provider>
@@ -38,19 +40,26 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pwdmanger/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2385">
-              <caret line="159" column="22" lean-forward="false" selection-start-line="159" selection-start-column="22" selection-end-line="159" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="165">
+              <caret line="93" column="112" selection-start-line="93" selection-start-column="112" selection-end-line="93" selection-end-column="112" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pwdmanger/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="302">
+              <caret line="134" column="26" lean-forward="true" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
+              <folding>
+                <element signature="e#1129#1149#0#HTML" expanded="true" />
+                <element signature="e#1141#1169#0#HTML" expanded="true" />
+                <element signature="e#4479#5533#0#HTML" />
+                <element signature="e#4910#4917#1#HTML" expanded="true" />
+                <element signature="e#4857#4864#1#HTML" expanded="true" />
+                <element signature="e#5956#5963#1#HTML" expanded="true" />
+                <element signature="e#5399#5406#1#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,29 +67,25 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pwdmanger/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="64" lean-forward="false" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/pwdmanger/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3255">
-              <caret line="217" column="83" lean-forward="false" selection-start-line="217" selection-start-column="83" selection-end-line="217" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pwdmanger/templatetags/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pwdmanger/models.py">
+      <file leaf-file-name="pagetag.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="-213">
+              <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+              <folding>
+                <element signature="e#650#2090#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,17 +93,23 @@
       <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pwdmanger/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1755">
-              <caret line="117" column="14" lean-forward="false" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
+            <state relative-caret-position="96">
+              <caret line="92" column="81" lean-forward="true" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pwdmanger/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="337" column="11" lean-forward="true" selection-start-line="337" selection-start-column="11" selection-end-line="337" selection-end-column="11" />
               <folding>
-                <element signature="e#2221#2239#0#HTML" expanded="true" />
-                <element signature="e#2763#2781#0#HTML" expanded="true" />
-                <element signature="e#3304#3322#0#HTML" expanded="true" />
-                <element signature="e#3842#3860#0#HTML" expanded="true" />
-                <element signature="e#4381#4399#0#HTML" expanded="true" />
-                <element signature="e#4909#4927#0#HTML" expanded="true" />
-                <element signature="e#5432#5450#0#HTML" expanded="true" />
-                <element signature="e#5959#5977#0#HTML" expanded="true" />
+                <element signature="e#412#1452#0#HTML" />
+                <element signature="e#9608#11428#0#HTML" />
+                <element signature="e#11249#11271#0#HTML" expanded="true" />
+                <element signature="e#8339#10165#0#HTML" />
+                <element signature="e#10178#11999#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -107,9 +118,8 @@
       <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pwdmanger/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
-              <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="402">
+              <caret line="97" column="34" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -119,8 +129,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -153,17 +163,19 @@
         <option value="$PROJECT_DIR$/templates/users/register.html" />
         <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/templates/users/login.html" />
-        <option value="$PROJECT_DIR$/dj_pwd/settings.py" />
         <option value="$PROJECT_DIR$/dj_pwd/__init__.py" />
-        <option value="$PROJECT_DIR$/pwdmanger/models.py" />
         <option value="$PROJECT_DIR$/pwdmanger/forms.py" />
-        <option value="$PROJECT_DIR$/templates/pwdmanger/list.html" />
-        <option value="$PROJECT_DIR$/templates/pwdmanger/base.html" />
         <option value="$PROJECT_DIR$/templates/pwdmanger/add.html" />
         <option value="$PROJECT_DIR$/templates/pwdmanger/edit.html" />
+        <option value="$PROJECT_DIR$/dj_pwd/settings.py" />
+        <option value="$PROJECT_DIR$/pwdmanger/models.py" />
+        <option value="$PROJECT_DIR$/pwdmanger/templatetags/__init__.py" />
         <option value="$PROJECT_DIR$/pwdmanger/urls.py" />
-        <option value="$PROJECT_DIR$/pwdmanger/views.py" />
+        <option value="$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py" />
         <option value="$PROJECT_DIR$/templates/pwdmanger/index.html" />
+        <option value="$PROJECT_DIR$/templates/pwdmanger/base.html" />
+        <option value="$PROJECT_DIR$/templates/pwdmanger/list.html" />
+        <option value="$PROJECT_DIR$/pwdmanger/views.py" />
       </list>
     </option>
   </component>
@@ -177,26 +189,16 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="9" />
-    <option name="y" value="53" />
-    <option name="width" value="1267" />
-    <option name="height" value="727" />
+    <option name="x" value="148" />
+    <option name="y" value="54" />
+    <option name="width" value="1235" />
+    <option name="height" value="746" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -217,7 +219,7 @@
               <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_passwd" type="462c0819:PsiDirectoryNode" />
               <item name="pwdmanger" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
@@ -230,24 +232,18 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="pwdmanger" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_passwd" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Vangie/code/django_passwd/templates/pwdmanger/index.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Vangie/code/django_passwd/templates/pwdmanger/index.html" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -269,31 +265,28 @@
   </component>
   <component name="RunManager">
     <configuration name="dj_pwd" type="Python.DjangoServer" factoryName="Django server">
+      <module name="dj_pwd" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="dj_pwd.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dj_pwd" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
+      <option name="browserUrl" value="http://0.0.0.0:8000/" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -317,28 +310,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="53" width="1267" height="727" extended-state="0" />
+    <frame x="148" y="54" width="1235" height="746" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24122137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23816794" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1578532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32977098" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.18208092" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2544643" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17408907" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="manage.py@dj_pwd" weight="0.32924962" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,41 +351,19 @@
     <breakpoint-manager>
       <option name="time" value="1" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/users/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/change.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/pwdmanger/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="9" />
+          <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pwdmanger/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1862">
-          <caret line="98" column="72" lean-forward="false" selection-start-line="98" selection-start-column="72" selection-end-line="98" selection-end-column="72" />
+          <caret line="98" column="72" selection-start-line="98" selection-start-column="72" selection-end-line="98" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -403,7 +377,7 @@
     <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -412,7 +386,7 @@
         <state relative-caret-position="171">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <element signature="e#0#28#0" expanded="false" />
+            <element signature="e#0#28#0" />
           </folding>
         </state>
       </provider>
@@ -421,14 +395,14 @@
     <entry file="file://$PROJECT_DIR$/templates/pwdmanger/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="107" lean-forward="false" selection-start-line="10" selection-start-column="107" selection-end-line="10" selection-end-column="107" />
+          <caret line="10" column="107" selection-start-line="10" selection-start-column="107" selection-end-line="10" selection-end-column="107" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/users/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="22" column="103" lean-forward="false" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
+          <caret line="22" column="103" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
         </state>
       </provider>
     </entry>
@@ -449,21 +423,21 @@
     <entry file="file://$PROJECT_DIR$/templates/users/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
-          <caret line="26" column="73" lean-forward="false" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
+          <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="19" />
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/users/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -493,66 +467,52 @@
     <entry file="file://$PROJECT_DIR$/templates/users/change.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/users/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <caret line="5" column="27" selection-end-line="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/users/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/users/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="32" column="91" lean-forward="false" selection-start-line="32" selection-start-column="91" selection-end-line="32" selection-end-column="91" />
-          <folding />
+          <caret line="32" column="91" selection-start-line="32" selection-start-column="91" selection-end-line="32" selection-end-column="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dj_pwd/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dj_pwd/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -564,42 +524,22 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/static/pwdmanger/vendor/datatables/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/static/pwdmanger/vendor/datatables/js/jquery.dataTables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18506">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state relative-caret-position="-18506" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/static/pwdmanger/vendor/datatables/js/dataTables.bootstrap4.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2315">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state relative-caret-position="-2315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/static/pwdmanger/vendor/datatables/js/dataTables.bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,7 +548,7 @@
         <state relative-caret-position="165">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <element signature="e#0#28#0" expanded="false" />
+            <element signature="e#0#28#0" />
           </folding>
         </state>
       </provider>
@@ -618,83 +558,107 @@
         <state relative-caret-position="450">
           <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
-            <element signature="e#0#35#0" expanded="false" />
+            <element signature="e#0#35#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pwdmanger/base.html">
+    <entry file="file://$PROJECT_DIR$/dj_pwd/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
-          <caret line="159" column="22" lean-forward="false" selection-start-line="159" selection-start-column="22" selection-end-line="159" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pwdmanger/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="117" column="14" lean-forward="false" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
-          <folding>
-            <element signature="e#2221#2239#0#HTML" expanded="true" />
-            <element signature="e#2763#2781#0#HTML" expanded="true" />
-            <element signature="e#3304#3322#0#HTML" expanded="true" />
-            <element signature="e#3842#3860#0#HTML" expanded="true" />
-            <element signature="e#4381#4399#0#HTML" expanded="true" />
-            <element signature="e#4909#4927#0#HTML" expanded="true" />
-            <element signature="e#5432#5450#0#HTML" expanded="true" />
-            <element signature="e#5959#5977#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pwdmanger/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pwdmanger/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="64" lean-forward="false" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-          <folding />
+        <state relative-caret-position="193">
+          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="210">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pwdmanger/views.py">
+    <entry file="file://$PROJECT_DIR$/pwdmanger/templatetags/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwdmanger/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pwdmanger/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        <state relative-caret-position="402">
+          <caret line="97" column="34" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pwdmanger/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="92" column="81" lean-forward="true" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwdmanger/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-213">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
           <folding>
-            <element signature="e#15#50#0" expanded="true" />
+            <element signature="e#650#2090#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pwdmanger/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3255">
-          <caret line="217" column="83" lean-forward="false" selection-start-line="217" selection-start-column="83" selection-end-line="217" selection-end-column="83" />
-          <folding />
+        <state relative-caret-position="282">
+          <caret line="337" column="11" lean-forward="true" selection-start-line="337" selection-start-column="11" selection-end-line="337" selection-end-column="11" />
+          <folding>
+            <element signature="e#412#1452#0#HTML" />
+            <element signature="e#9608#11428#0#HTML" />
+            <element signature="e#11249#11271#0#HTML" expanded="true" />
+            <element signature="e#8339#10165#0#HTML" />
+            <element signature="e#10178#11999#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pwdmanger/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="93" column="112" selection-start-line="93" selection-start-column="112" selection-end-line="93" selection-end-column="112" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pwdmanger/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="302">
+          <caret line="134" column="26" lean-forward="true" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
+          <folding>
+            <element signature="e#1129#1149#0#HTML" expanded="true" />
+            <element signature="e#1141#1169#0#HTML" expanded="true" />
+            <element signature="e#4479#5533#0#HTML" />
+            <element signature="e#4910#4917#1#HTML" expanded="true" />
+            <element signature="e#4857#4864#1#HTML" expanded="true" />
+            <element signature="e#5956#5963#1#HTML" expanded="true" />
+            <element signature="e#5399#5406#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwdmanger/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="58" column="8" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding>
+            <element signature="e#15#50#0" expanded="true" />
+            <marker date="1532594787982" expanded="true" signature="1957:2224" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

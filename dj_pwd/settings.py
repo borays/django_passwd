@@ -135,3 +135,8 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
 
 LOGIN_URL='/user_login'
+
+# session 设置
+SESSION_COOKIE_AGE = 60 * 30 # 30分钟
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True # 关闭浏览器，则COOKIE失效

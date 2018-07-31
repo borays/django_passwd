@@ -22,7 +22,7 @@ def user_register(request):
             new_user = form.save()
             authenticated_user = authenticate(username=new_user.username, password=request.POST['password1'])
             login(request, authenticated_user)
-            return HttpResponseRedirect(reverse('pwdmanger:passwd_list'))
+            return HttpResponseRedirect(reverse('pwdmanger:index'))
     content = {'form': form}
     return render(request, 'users/register.html', content)
 

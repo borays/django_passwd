@@ -22,7 +22,7 @@ from django.forms.models import model_to_dict
 # for search
 from django.db.models import Q
 
-
+@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 @login_required()
 def index(request):
     # op_info = get_op_info()
@@ -33,7 +33,7 @@ def index(request):
     owners = Passwd_info.objects.values('order').distinct()
     apps = Passwd_info.objects.values('apps').distinct()
     # ops = Passwd_info.objects.values('op').distinct()
-    # os_type = Passwd_info.objects.values('os_type').distinct()
+    os_type = Passwd_info.objects.values('os_type').distinct()
     cluster = Passwd_info.objects.values('cluster_name').distinct()
     all_vm = Passwd_info.objects.all()
     # content = {'order': owners, 'apps': apps, 'ops': ops, 'cluster': cluster, 'app_info': app_info,
@@ -41,7 +41,7 @@ def index(request):
     #            'all_vm': all_vm, 'op_info': op_info}
     content = {'order': owners, 'apps': apps, 'cluster': cluster,
                'order_info': order_info, 'cluster_info': cluster_info, 'os_info': os_info,
-               'all_vm': all_vm}
+               'all_vm': all_vm,'os_type':os_type}
     return render(request, 'pwdmanger/index.html', content)
 
 
@@ -70,7 +70,7 @@ def passwd_list(request):
     content = {'pwd_list': contents, "last_change": last_change, "paginator": paginator}
     return render(request, 'pwdmanger/list.html', content)
 
-
+@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 @login_required()
 def passwd_search(request):
     q = request.GET.get('keyword')
@@ -159,7 +159,7 @@ def get_order_info():
 
 
 def get_cluster_info():
-    cluster_info = Passwd_info.objects.values_list('cluster_name').annotate(Count('id'))
+    cluster_info = Passwd_info.objects.values_list('cluster_name').annotate(nums=Count('id')).order_by('-nums')
     data = []
     x = 'label'
     y = 'value'
@@ -171,7 +171,7 @@ def get_cluster_info():
 
 
 def get_os_info():
-    os_info = Passwd_info.objects.values_list('os_type').annotate(Count('id'))
+    os_info = Passwd_info.objects.values_list('os_type').annotate(nums=Count('id')).order_by('-nums')
     data = []
     x = 'label'
     y = 'value'

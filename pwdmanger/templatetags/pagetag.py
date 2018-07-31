@@ -6,7 +6,7 @@ register=template.Library()
 
 
 @register.simple_tag
-def pagination_for_wjj(current_page,paginator,num_of_displaypages=5,num_of_backpages=2):
+def pagination_for_wjj(current_page,paginator,num_of_displaypages=10,num_of_backpages=4):
     #  current_page is a django.core.paginator.Page 's instance
     #  paginator is a django.core.paginator.Paginator 's instance
     #
@@ -45,7 +45,7 @@ def pagination_for_wjj(current_page,paginator,num_of_displaypages=5,num_of_backp
         return html
 
 @register.simple_tag
-def pagination_for_search(keyword,current_page,paginator,num_of_displaypages=5,num_of_backpages=2):
+def pagination_for_search(keyword,current_page,paginator,num_of_displaypages=10,num_of_backpages=4):
     #  current_page is a django.core.paginator.Page 's instance
     #  paginator is a django.core.paginator.Paginator 's instance
     #

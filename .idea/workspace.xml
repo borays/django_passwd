@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="188a60a4-ec39-457d-ae1f-e84837a397ae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pwdmanger/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pwdmanger/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py" beforeDir="false" afterPath="$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pwdmanger/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="118" column="32" lean-forward="true" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
+            <state relative-caret-position="243">
+              <caret line="117" column="32" lean-forward="true" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
               <folding>
                 <element signature="e#15#50#0" expanded="true" />
                 <marker date="1533006240978" expanded="true" signature="2086:2353" ph="..." />
@@ -75,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagetag.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pagetag.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+            <state relative-caret-position="256">
+              <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -156,13 +155,13 @@
         <option value="$PROJECT_DIR$/pwdmanger/models.py" />
         <option value="$PROJECT_DIR$/pwdmanger/templatetags/__init__.py" />
         <option value="$PROJECT_DIR$/pwdmanger/urls.py" />
-        <option value="$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py" />
         <option value="$PROJECT_DIR$/templates/pwdmanger/base.html" />
         <option value="$PROJECT_DIR$/templates/pwdmanger/list.html" />
         <option value="$PROJECT_DIR$/templates/pwdmanger/index.html" />
         <option value="$PROJECT_DIR$/dj_pwd/settings.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/pwdmanger/views.py" />
+        <option value="$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py" />
       </list>
     </option>
   </component>
@@ -205,6 +204,12 @@
               <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_passwd" type="462c0819:PsiDirectoryNode" />
               <item name="pwdmanger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_passwd" type="462c0819:PsiDirectoryNode" />
+              <item name="pwdmanger" type="462c0819:PsiDirectoryNode" />
+              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
@@ -578,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/pwdmanger/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1395">
@@ -629,12 +627,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pwdmanger/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="118" column="32" lean-forward="true" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
+        <state relative-caret-position="243">
+          <caret line="117" column="32" lean-forward="true" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
           <folding>
             <element signature="e#15#50#0" expanded="true" />
             <marker date="1533006240978" expanded="true" signature="2086:2353" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
         </state>
       </provider>
     </entry>

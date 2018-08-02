@@ -105,3 +105,15 @@ def server_search(request):
 
     content = {'pwd_list': contents, "nums": nums, "paginator": paginator, 'keyword': q}
     return render(request, 'servermanger/list.html', content)
+
+@login_required()
+def api_update_phy(request):
+    if request.method != 'POST':
+        return HttpResponse("404")
+    else:
+        ip = request.POST.get('ip')
+        password = request.POST.get('password')
+        if Server_info.objects.filter(ip_address=ip).update(password=password):
+            return HttpResponse("OK")
+        else:
+            return HttpResponse("ERROR")

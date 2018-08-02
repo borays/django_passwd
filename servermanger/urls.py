@@ -10,4 +10,5 @@ urlpatterns = [
     path('server_delete/<int:item_id>/', views.server_delete, name='server_delete'),
     path('server_add/', views.server_add, name='server_add'),
     path('server_search', views.server_search, name='server_search'),
+    path('api/update_phy', views.api_update_phy, name='api_update_phy'),
 ]

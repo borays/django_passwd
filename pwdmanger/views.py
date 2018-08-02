@@ -7,7 +7,8 @@ from django.urls import reverse
 from .models import Passwd_info
 from .forms import Passwd_infoForm
 
-import datetime
+import datetime, pytz
+# from django.utils import timezone as datetime
 from django.db.models import Count, Min, Sum
 
 # for limits
@@ -21,6 +22,7 @@ from django.forms.models import model_to_dict
 
 # for search
 from django.db.models import Q
+
 
 @login_required()
 @permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
@@ -36,12 +38,16 @@ def index(request):
     os_type = Passwd_info.objects.values('os_type').distinct()
     cluster = Passwd_info.objects.values('cluster_name').distinct()
     all_vm = Passwd_info.objects.all()
+    last_week_order, week_order,last_week_nums = getvm_last_week_by_order()
+    last_week_apps, week_apps = getvm_last_week_by_apps()
+    last_week_by_day=getvm_lastweek_by_days()
     # content = {'order': owners, 'apps': apps, 'ops': ops, 'cluster': cluster, 'app_info': app_info,
     #            'order_info': order_info, 'cluster_info': cluster_info, 'os_info': os_info, 'os_type': os_type,
     #            'all_vm': all_vm, 'op_info': op_info}
     content = {'order': owners, 'apps': apps, 'cluster': cluster,
                'order_info': order_info, 'cluster_info': cluster_info, 'os_info': os_info,
-               'all_vm': all_vm,'os_type':os_type}
+               'all_vm': all_vm, 'os_type': os_type, 'last_week_by_day': last_week_by_day,'last_week_order':last_week_order,
+               'week_order':week_order,'last_week_apps': last_week_apps, 'week_apps': week_apps,'last_week_nums':last_week_nums}
     return render(request, 'pwdmanger/index.html', content)
 
 
@@ -69,6 +75,7 @@ def passwd_list(request):
     # content = {'data': data, "last_change": last_change}
     content = {'pwd_list': contents, "last_change": last_change, "paginator": paginator}
     return render(request, 'pwdmanger/list.html', content)
+
 
 @login_required()
 @permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
@@ -206,6 +213,7 @@ def api_update_pass(request):
         else:
             return HttpResponse("ERROR")
 
+
 # def get_list_data():
 #     data=[]
 #     _data=Passwd_info.objects.all()
@@ -214,3 +222,58 @@ def api_update_pass(request):
 #         data.append(_tmp_data)
 #
 #     return data
+
+def getvm_last_week_by_order():
+    time_to = datetime.datetime.now()
+    delta = datetime.timedelta(days=7)
+    time_from = time_to - delta
+    last_week = Passwd_info.objects.filter(created_time__range=(time_from, time_to)).values_list('order').annotate(
+        nums=Count('id')).order_by('-nums')
+    last_week_nums=Passwd_info.objects.filter(created_time__range=(time_from, time_to)).count()
+    count_num = len(last_week)
+    data = []
+    x = '负责人'
+    y = '数量'
+    for i in last_week:
+        list_data = list(i)
+        _tmp_data = {x: list_data[0], y: list_data[1]}
+        data.append(_tmp_data)
+    return data, count_num,last_week_nums
+
+
+def getvm_last_week_by_apps():
+    time_to = datetime.datetime.now()
+    delta = datetime.timedelta(days=7)
+    time_from = time_to - delta
+    last_week = Passwd_info.objects.filter(created_time__range=(time_from, time_to)).values_list('apps').annotate(
+        nums=Count('id')).order_by('-nums')
+    count_num = len(last_week)
+    data = []
+    x = '应用'
+    y = '数量'
+    for i in last_week:
+        list_data = list(i)
+        _tmp_data = {x: list_data[0], y: list_data[1]}
+        data.append(_tmp_data)
+    return data, count_num
+
+def getvm_lastweek_by_days():
+    # today=datetime.datetime.now(pytz.utc).date()
+    today = datetime.datetime.now().date()
+    date_range=[]
+    date_range.append(today)
+    for i in range(1,7):
+        delta=datetime.timedelta(days=i)
+        delta_day=today-delta
+        date_range.append(delta_day)
+    # days=len(date_range)
+    data=[]
+    x = '日期'
+    y = '数量'
+    for i in date_range:
+        start=str(i)+' '+'00:00:00'
+        end=str(i)+' '+'23:59:59'
+        _tmp_data=Passwd_info.objects.filter(created_time__range=(start,end)).count()
+        _tmp_dict={x:str(i),y:_tmp_data}
+        data.append(_tmp_dict)
+    return data

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="188a60a4-ec39-457d-ae1f-e84837a397ae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/dj_pwd/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dj_pwd/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servermanger/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/servermanger/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servermanger/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/servermanger/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwdmanger/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pwdmanger/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pwdmanger/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pwdmanger/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,12 +20,21 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pwdmanger/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="196" selection-start-line="196" selection-end-line="206" selection-end-column="40" />
+            <state relative-caret-position="302">
+              <caret line="253" column="23" lean-forward="true" selection-start-line="253" selection-start-column="23" selection-end-line="253" selection-end-column="23" />
               <folding>
                 <element signature="e#15#50#0" expanded="true" />
-                <marker date="1533190545934" expanded="true" signature="2086:2353" ph="..." />
+                <marker date="1533240095567" expanded="true" signature="2524:2791" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pwdmanger/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -52,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servermanger/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -82,29 +90,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servermanger/models.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pwdmanger/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+            <state relative-caret-position="127">
+              <caret line="465" column="32" lean-forward="true" selection-start-line="465" selection-start-column="32" selection-end-line="465" selection-end-column="32" />
+              <folding>
+                <element signature="e#13341#13363#0#HTML" expanded="true" />
+                <element signature="e#9719#11539#0#HTML" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servermanger/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dj_pwd/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            <state relative-caret-position="109">
+              <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -165,7 +168,6 @@
         <option value="$PROJECT_DIR$/pwdmanger/models.py" />
         <option value="$PROJECT_DIR$/pwdmanger/templatetags/__init__.py" />
         <option value="$PROJECT_DIR$/pwdmanger/urls.py" />
-        <option value="$PROJECT_DIR$/templates/pwdmanger/index.html" />
         <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/pwdmanger/templatetags/pagetag.py" />
         <option value="$PROJECT_DIR$/servermanger/forms.py" />
@@ -177,12 +179,13 @@
         <option value="$PROJECT_DIR$/templates/pwdmanger/edit.html" />
         <option value="$PROJECT_DIR$/templates/servermanger/list.html" />
         <option value="$PROJECT_DIR$/templates/pwdmanger/base.html" />
-        <option value="$PROJECT_DIR$/pwdmanger/views.py" />
         <option value="$PROJECT_DIR$/servermanger/admin.py" />
         <option value="$PROJECT_DIR$/pwdmanger/admin.py" />
-        <option value="$PROJECT_DIR$/dj_pwd/settings.py" />
         <option value="$PROJECT_DIR$/servermanger/views.py" />
         <option value="$PROJECT_DIR$/servermanger/urls.py" />
+        <option value="$PROJECT_DIR$/templates/pwdmanger/index.html" />
+        <option value="$PROJECT_DIR$/pwdmanger/views.py" />
+        <option value="$PROJECT_DIR$/dj_pwd/settings.py" />
       </list>
     </option>
   </component>
@@ -196,9 +199,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="120" />
-    <option name="y" value="37" />
-    <option name="width" value="1235" />
+    <option name="x" value="221" />
+    <option name="y" value="43" />
+    <option name="width" value="1219" />
     <option name="height" value="746" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -219,12 +222,23 @@
             <path>
               <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_passwd" type="462c0819:PsiDirectoryNode" />
-              <item name="servermanger" type="462c0819:PsiDirectoryNode" />
+              <item name="dj_pwd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_passwd" type="462c0819:PsiDirectoryNode" />
-              <item name="static_all" type="462c0819:PsiDirectoryNode" />
+              <item name="pwdmanger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_passwd" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_passwd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_passwd" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="pwdmanger" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,17 +329,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="120" y="37" width="1235" height="746" extended-state="0" />
+    <frame x="221" y="43" width="1219" height="746" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50040483" side_tool="true" weight="0.32291666" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2544643" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29464287" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32977098" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.19345239" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3735119" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17408907" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17637408" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -487,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pwdmanger/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="276" column="83" selection-start-line="276" selection-start-column="76" selection-end-line="276" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -573,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pwdmanger/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/servermanger/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -618,24 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dj_pwd/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pwdmanger/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="196" selection-start-line="196" selection-end-line="206" selection-end-column="40" />
-          <folding>
-            <element signature="e#15#50#0" expanded="true" />
-            <marker date="1533190545934" expanded="true" signature="2086:2353" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/servermanger/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -660,6 +642,42 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwdmanger/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pwdmanger/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="253" column="23" lean-forward="true" selection-start-line="253" selection-start-column="23" selection-end-line="253" selection-end-column="23" />
+          <folding>
+            <element signature="e#15#50#0" expanded="true" />
+            <marker date="1533240095567" expanded="true" signature="2524:2791" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pwdmanger/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="465" column="32" lean-forward="true" selection-start-line="465" selection-start-column="32" selection-end-line="465" selection-end-column="32" />
+          <folding>
+            <element signature="e#13341#13363#0#HTML" expanded="true" />
+            <element signature="e#9719#11539#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dj_pwd/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
         </state>
       </provider>
     </entry>

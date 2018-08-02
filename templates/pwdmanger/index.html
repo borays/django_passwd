@@ -197,7 +197,115 @@
                 <!-- /.panel -->
                 <!-- /.panel -->
 {#            </div>#}
+<div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 一周VM统计/负责人 - {{ week_order }}
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                        data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#">Action</a>
+                                    </li>
+                                    <li><a href="#">Another action</a>
+                                    </li>
+                                    <li><a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-heading -->
+{#                                        <div class="panel-body">#}
+{#                                            <div id="morris-area-chart"></div>#}
+{#                                        </div>#}
 
+                    <div id="bar-order-week" style="height: 250px;"></div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                <!-- /.panel -->
+            </div>
+
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i>一周VM统计/每日 - {{ last_week_nums }}
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                        data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#">Action</a>
+                                    </li>
+                                    <li><a href="#">Another action</a>
+                                    </li>
+                                    <li><a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-heading -->
+                    {#                    <div class="panel-body">#}
+                    {#                        <div id="morris-area-chart"></div>#}
+                    {#                    </div>#}
+
+                    <div id="line-week" style="height: 250px;"></div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                <!-- /.panel -->
+            </div>
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> 一周VM统计/应用 - {{ week_apps }}
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                        data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#">Action</a>
+                                    </li>
+                                    <li><a href="#">Another action</a>
+                                    </li>
+                                    <li><a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-heading -->
+                    {#                    <div class="panel-body">#}
+                    {#                        <div id="morris-area-chart"></div>#}
+                    {#                    </div>#}
+
+                    <div id="bar-apps-week" style="height: 250px;"></div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                <!-- /.panel -->
+            </div>
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -327,6 +435,28 @@
         });
 
 
+
+        new Morris.Bar({
+            element: 'bar-apps-week',
+            data:{{ last_week_apps|safe }},
+            xkey: '应用',
+            ykeys: ['数量'],
+            labels: ['数量'],
+            grid:'True',
+            resize: 'True'
+        });
+
+        new Morris.Bar({
+            element: 'bar-order-week',
+            data:{{ last_week_order|safe }},
+            xkey: '负责人',
+            ykeys: ['数量'],
+            labels: ['数量'],
+            grid:'True',
+            resize: 'True'
+        });
+
+
         new Morris.Donut({
             element: 'donut-cluster',
             data: {{ cluster_info|safe }}
@@ -335,6 +465,16 @@
         new Morris.Donut({
             element: 'donut-os',
             data: {{ os_info|safe }}
+        });
+
+        new Morris.Line({
+            element: 'line-week',
+            data:{{ last_week_by_day|safe }},
+            xkey: '日期',
+            ykeys: ['数量'],
+            labels: ['数量'],
+            grid:'True',
+            resize: 'True'
         });
 
     </script>

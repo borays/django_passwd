@@ -91,26 +91,62 @@
                 <ul class="nav" id="side-menu">
                     <li class="sidebar-search">
                         <div class="input-group custom-search-form">
-                            <form method="get" action="{% url 'pwdmanger:passwd_search' %}" class="form-inline">
-                            <input type="text" name="keyword" class="form-control" placeholder="搜索" required>
-                        </form>
+{#                            <form method="get" action="{% url 'pwdmanger:passwd_search' %}" class="form-inline">#}
+{#                                <input type="text" name="keyword" class="form-control" placeholder="搜索" required>#}
+{#                            </form>#}
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" href="#">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
                         </div>
 
 
                         <!-- /input-group -->
                     </li>
+                    {#                    <li>#}
+                    {#                        <a href="{% url 'pwdmanger:index' %}"><i class="fa fa-dashboard fa-fw"></i> 仪表盘</a>#}
+                    {#                    </li>#}
                     <li>
-                        <a href="{% url 'pwdmanger:index' %}"><i class="fa fa-dashboard fa-fw"></i> 仪表盘</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa fa-table fa-fw"></i> 密码管理<span class="fa arrow"></span></a>
+                        <a href=""><i class="fa fa-dashboard fa-fw"></i>仪表盘<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="{% url 'pwdmanger:passwd_list' %}">密码列表</a>
+                                <a href="{% url 'pwdmanger:index' %}">虚拟机视图</a>
                             </li>
-{#                            <li>#}
-{#                                <a href="{% url 'pwdmanger:passwd_add' %}">新增密码</a>#}
-{#                            </li>#}
+                            <li>
+                                <a href="#">物理机视图</a>
+                            </li>
+                            <li>
+                                <a href="#">故障视图</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-desktop fa-fw"></i> 资产管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{% url 'pwdmanger:passwd_list' %}">虚拟机列表</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'servermanger:server_list' %}">物理机列表</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-bug fa-fw"></i> 故障管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">故障列表</a>
+                            </li>
+                            <li>
+                                <a href="#">故障类型</a>
+                            </li>
+                            {#                            <li>#}
+                            {#                                <a href="{% url 'pwdmanger:passwd_add' %}">新增密码</a>#}
+                            {#                            </li>#}
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>

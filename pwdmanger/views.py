@@ -22,8 +22,8 @@ from django.forms.models import model_to_dict
 # for search
 from django.db.models import Q
 
-@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 @login_required()
+@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 def index(request):
     # op_info = get_op_info()
     # app_info = get_apps_info()
@@ -49,8 +49,8 @@ def test(request):
     return render(request, 'pwdmanger/list.html')
 
 
-@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 @login_required()
+@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 def passwd_list(request):
     pwd_list = Passwd_info.objects.all().order_by('-changed_time')
     paginator = Paginator(pwd_list, 10)
@@ -70,8 +70,8 @@ def passwd_list(request):
     content = {'pwd_list': contents, "last_change": last_change, "paginator": paginator}
     return render(request, 'pwdmanger/list.html', content)
 
-@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 @login_required()
+@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 def passwd_search(request):
     q = request.GET.get('keyword')
     if not q:
@@ -96,8 +96,8 @@ def passwd_search(request):
     return render(request, 'pwdmanger/list.html', content)
 
 
-@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 @login_required()
+@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 def passwd_edit(request, item_id):
     entry = Passwd_info.objects.get(id=item_id)
 
@@ -112,8 +112,8 @@ def passwd_edit(request, item_id):
     return render(request, 'pwdmanger/edit.html', content)
 
 
-@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 @login_required()
+@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 def passwd_add(request):
     if request.method != 'POST':
         form = Passwd_infoForm()
@@ -126,8 +126,8 @@ def passwd_add(request):
     return render(request, 'pwdmanger/add.html', content)
 
 
-@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 @login_required()
+@permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 def passwd_delete(request, item_id):
     Passwd_info.objects.get(id=item_id).delete()
     return HttpResponseRedirect(reverse('pwdmanger:passwd_list'))

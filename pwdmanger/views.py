@@ -225,7 +225,7 @@ def api_update_pass(request):
 
 def getvm_last_week_by_order():
     time_to = datetime.datetime.now()
-    delta = datetime.timedelta(days=7)
+    delta = datetime.timedelta(days=6)
     time_from = time_to - delta
     last_week = Passwd_info.objects.filter(created_time__range=(time_from, time_to)).values_list('order').annotate(
         nums=Count('id')).order_by('-nums')
@@ -243,7 +243,7 @@ def getvm_last_week_by_order():
 
 def getvm_last_week_by_apps():
     time_to = datetime.datetime.now()
-    delta = datetime.timedelta(days=7)
+    delta = datetime.timedelta(days=6)
     time_from = time_to - delta
     last_week = Passwd_info.objects.filter(created_time__range=(time_from, time_to)).values_list('apps').annotate(
         nums=Count('id')).order_by('-nums')

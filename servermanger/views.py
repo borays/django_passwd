@@ -21,7 +21,7 @@ from django.forms.models import model_to_dict
 
 # for search
 from django.db.models import Q
-
+import json
 
 # def test(request):
 #     return render(request, 'servermanger/list.html')
@@ -117,3 +117,44 @@ def api_update_phy(request):
             return HttpResponse("OK")
         else:
             return HttpResponse("ERROR")
+
+def work_list(request):
+    result={}
+    if request.method=='POST':
+        all_result=Server_info.objects.all().order_by('-changed_time')
+        recordsTotal=all_result.count()
+        recordsFiltered=recordsTotal
+
+        start=int(request.POST['start'])
+        length=int(request.POST['length'])
+        draw=int(request.POST['draw'])
+        new_search=request.POST['search[value]']
+        new_order=request.POST['order[0][column]']
+        by_name=request.POST['columns[{0}][data]'.format(new_order)]
+        fun_order=request.POST['order[0][dir]']
+
+        if by_name:
+            if fun_order=="asc":
+                all_result=all_result.order_by(by_name)
+            else:
+                all_result=all_result.order_by("-{0}".format(by_name))
+
+        if new_search:
+            all_result=all_result.filter(Q(position__icontains=new_search) | Q(server_type__icontains=new_search) | Q(sn__icontains=new_search) | Q(ip_address__icontains=new_search) | Q(
+            host_name__icontains=new_search) | Q(user_name__icontains=new_search) | Q(password__icontains=new_search) | Q(mgmt_ip__icontains=new_search) | Q(
+            mgmt_user__icontains=new_search) | Q(mgmt_pass__icontains=new_search) | Q(op__icontains=new_search) | Q(order__icontains=new_search) | Q(
+            ma_info__icontains=new_search) | Q(apps__icontains=new_search))
+
+        datas=all_result[start:(start+length)]
+        resp=[obj.as_dict() for obj in datas]
+        result={
+            'draw':draw,
+            'recordsTotal':recordsTotal,
+            'recordsFiltered':recordsFiltered,
+            'data':resp,
+        }
+        print(result)
+        print(json.dumps(result))
+
+    # return HttpResponse(json.dumps(result),content_type="application/json")
+    return render(request, 'servermanger/list2.html', result)

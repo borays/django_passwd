@@ -11,4 +11,5 @@ urlpatterns = [
     path('server_add/', views.server_add, name='server_add'),
     path('server_search', views.server_search, name='server_search'),
     path('api/update_phy', views.api_update_phy, name='api_update_phy'),
+    # path('work_list/', views.work_list, name='work_list'),
 ]

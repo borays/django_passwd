@@ -91,9 +91,9 @@
                 <ul class="nav" id="side-menu">
                     <li class="sidebar-search">
                         <div class="input-group custom-search-form">
-{#                            <form method="get" action="{% url 'pwdmanger:passwd_search' %}" class="form-inline">#}
-{#                                <input type="text" name="keyword" class="form-control" placeholder="搜索" required>#}
-{#                            </form>#}
+                            {#                            <form method="get" action="{% url 'pwdmanger:passwd_search' %}" class="form-inline">#}
+                            {#                                <input type="text" name="keyword" class="form-control" placeholder="搜索" required>#}
+                            {#                            </form>#}
                             <input type="text" class="form-control" placeholder="Search...">
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="button" href="#">
@@ -157,7 +157,28 @@
         <!-- /.navbar-static-side -->
     </nav>
 
+    {#{% if messages %}#}
+    {##}
+    {#<ul class="messages">#}
+    {##}
+    {#    {% for message in messages %}#}
+    {##}
+    {#    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>#}
+    {##}
+    {#    {% endfor %}#}
+    {##}
+    {#</ul>#}
+    {##}
+    {##}
+    {#{% endif %}#}
+
+
     {% block page_wrapper %}
+        {#        {% if flash_info %}#}
+        {#<p class="messages">#}
+        {#{{ flash_info }}#}
+        {#<p>#}
+        {#        {% endif %}#}
     {% endblock page_wrapper %}
     <!-- /.row -->
 </div>

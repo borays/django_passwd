@@ -23,6 +23,9 @@ from django.forms.models import model_to_dict
 from django.db.models import Q
 import json
 
+#for messages
+from django.contrib import messages
+
 # def test(request):
 #     return render(request, 'servermanger/list.html')
 @login_required()
@@ -50,13 +53,16 @@ def server_list(request):
 @permission_required('servermanger.delete_server_info', 'servermanger.add_server_info', 'servermanger.change_server_info')
 def server_edit(request, item_id):
     entry = Server_info.objects.get(id=item_id)
+    flash=''
 
     if request.method != 'POST':
         form = Server_infoForm(instance=entry)
     else:
         form = Server_infoForm(instance=entry, data=request.POST)
+        item_ip=request.POST.get('ip_address')
         if form.is_valid():
             form.save()
+            messages.success(request,"数据%s修改成功！" % item_ip)
             return HttpResponseRedirect(reverse('servermanger:server_list'))
     content = {'entry': entry, 'form': form}
     return render(request, 'servermanger/edit.html', content)
@@ -64,7 +70,9 @@ def server_edit(request, item_id):
 @login_required()
 @permission_required('servermanger.delete_server_info', 'servermanger.add_server_info', 'servermanger.change_server_info')
 def server_delete(request, item_id):
+    item_ip=Server_info.objects.get(id=item_id)
     Server_info.objects.get(id=item_id).delete()
+    messages.success(request, "数据%s删除成功！" % item_ip)
     return HttpResponseRedirect(reverse('servermanger:server_list'))
 
 @login_required()
@@ -74,8 +82,10 @@ def server_add(request):
         form = Server_infoForm()
     else:
         form = Server_infoForm(request.POST)
+        item_ip = request.POST.get('ip_address')
         if form.is_valid():
             form.save()
+            messages.success(request, "数据%s添加成功！" % item_ip)
             return HttpResponseRedirect(reverse('servermanger:server_list'))
     content = {'form': form}
     return render(request, 'servermanger/add.html', content)

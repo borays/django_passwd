@@ -23,6 +23,8 @@ from django.forms.models import model_to_dict
 # for search
 from django.db.models import Q
 
+#for messages
+from django.contrib import messages
 
 @login_required()
 @permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
@@ -112,8 +114,10 @@ def passwd_edit(request, item_id):
         form = Passwd_infoForm(instance=entry)
     else:
         form = Passwd_infoForm(instance=entry, data=request.POST)
+        item_ip = request.POST.get('ip_address')
         if form.is_valid():
             form.save()
+            messages.success(request, "数据%s修改成功！" % item_ip)
             return HttpResponseRedirect(reverse('pwdmanger:passwd_list'))
     content = {'entry': entry, 'form': form}
     return render(request, 'pwdmanger/edit.html', content)
@@ -126,8 +130,10 @@ def passwd_add(request):
         form = Passwd_infoForm()
     else:
         form = Passwd_infoForm(request.POST)
+        item_ip = request.POST.get('ip_address')
         if form.is_valid():
             form.save()
+            messages.success(request, "数据%s添加成功！" % item_ip)
             return HttpResponseRedirect(reverse('pwdmanger:passwd_list'))
     content = {'form': form}
     return render(request, 'pwdmanger/add.html', content)
@@ -136,7 +142,9 @@ def passwd_add(request):
 @login_required()
 @permission_required('pwdmanger.delete_passwd_info', 'pwdmanger.add_passwd_info', 'pwdmanger.change_passwd_info')
 def passwd_delete(request, item_id):
+    item_ip = Passwd_info.objects.get(id=item_id)
     Passwd_info.objects.get(id=item_id).delete()
+    messages.success(request, "数据%s删除成功！" % item_ip)
     return HttpResponseRedirect(reverse('pwdmanger:passwd_list'))
 
 

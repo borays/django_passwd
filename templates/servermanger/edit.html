@@ -130,15 +130,29 @@
                                     <p><span>{{ form.errors.mgmt_pass }}</span></p>
                                 </div>
                             </div>
+{#                            <div class="form-group">#}
+{#                                <label class="col-sm-2 control-label">维保时间</label>#}
+{#                                <div class="col-sm-10">#}
+{#                                    <input class="form-control" placeholder="维保时间"#}
+{#                                           value="{{ entry.ma_info| date:"Y-m-d" }}"#}
+{#                                           name="ma_info">#}
+{#                                    <p><span>{{ form.errors.ma_info }}</span></p>#}
+{#                                </div>#}
+{#                            </div>#}
+
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">维保时间</label>
+                                <label class="col-md-2 control-label">维保时间</label>
                                 <div class="col-sm-10">
-                                    <input class="form-control" placeholder="维保时间"
-                                           value="{{ entry.ma_info| date:"Y-m-d" }}"
-                                           name="ma_info">
+                                <div class="input-group date form_date col-md-5" data-date=""
+                                     data-date-format="yyyy-mm-dd" >
+
+                                    <input class="form-control" placeholder="维保时间" size="16" type="text" value="{{ entry.ma_info| date:"Y-m-d" }}" name="ma_info" readonly>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                     <p><span>{{ form.errors.ma_info }}</span></p>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="col-sm-8">
                                 <a class="btn btn-default" href="{% url 'servermanger:server_list' %}">返回</a>
                                 <button type="submit" class="btn btn-default">修改</button>
@@ -151,3 +165,17 @@
         </div>
     </div>
 {% endblock page_wrapper %}
+{% block javasc %}
+    <script>
+    $('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+    </script>
+{% endblock javasc %}
